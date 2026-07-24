@@ -42,8 +42,20 @@
   ]
 }
 </script>
+
+  <style>
+    .language-picker{position:fixed;top:14px;right:14px;z-index:9999;background:#ffffff;border:2px solid #087f8c;border-radius:12px;padding:8px 12px;box-shadow:0 8px 22px rgba(0,0,0,.18);font-family:Arial,sans-serif;color:#123;max-width:230px}
+    .language-picker strong{display:block;font-size:12px;margin-bottom:4px;text-align:center}
+    .language-picker select{max-width:200px;padding:5px;border-radius:6px;border:1px solid #789;background:#fff;color:#123}
+    @media(max-width:640px){.language-picker{top:8px;right:8px;padding:6px 8px;max-width:190px}.language-picker strong{font-size:11px}.language-picker select{max-width:165px}}
+  </style>
 </head>
 <body>
+  <div class="language-picker notranslate" aria-label="Choose language">
+    <strong>Language / Idioma</strong>
+    <div id="google_translate_element"></div>
+  </div>
+
   <header>
     <a class="brand" href="/">Bimini Boat Tours</a>
     <nav><a class="whatsapp" href="https://wa.me/13054570817">WhatsApp</a></nav>
@@ -225,6 +237,18 @@
     <a href="tel:+13054570817">Call Now</a>
     <a class="whatsapp" href="https://wa.me/13054570817">WhatsApp</a>
   </nav>
+
+  <script>
+    function googleTranslateElementInit(){
+      new google.translate.TranslateElement({
+        pageLanguage:'en',
+        includedLanguages:'en,es,fr,pt,it,de,ht,nl,pl,ru,zh-CN,ja,ko,ar',
+        layout:google.translate.TranslateElement.InlineLayout.SIMPLE,
+        autoDisplay:false
+      },'google_translate_element');
+    }
+  </script>
+  <script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 </body>
 </html>
 
