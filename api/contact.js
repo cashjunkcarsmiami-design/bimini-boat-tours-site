@@ -23,7 +23,7 @@ export default async function handler(req, res) {
     return;
   }
 
-  const to = process.env.CONTACT_TO_EMAIL || "cashjunkcarsmiami@gmail.com";
+  const to = process.env.CONTACT_TO_EMAIL || "biminiboatturs@gmail.com";
   const from = process.env.CONTACT_FROM_EMAIL || "Website Leads <onboarding@resend.dev>";
   const subjectPrefix = process.env.CONTACT_SUBJECT_PREFIX || "Bimini Boat Tours Lead";
   const phone = params.get("phone") || params.get("Phone") || params.get("Phone Number") || "";
