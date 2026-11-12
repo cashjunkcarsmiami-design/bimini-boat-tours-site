@@ -1,6 +1,7 @@
 {
   "cleanUrls": true,
   "trailingSlash": false,
+  "redirects": [{"source":"/:path*","has":[{"type":"host","value":"www.biminiboattours.com"}],"destination":"https://biminiboattours.com/:path*","permanent":true}],
   "headers": [
     {
       "source": "/(.*)",
